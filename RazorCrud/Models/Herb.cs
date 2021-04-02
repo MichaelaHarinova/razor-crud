@@ -21,9 +21,8 @@ namespace RazorCrud.Models
         public string Part { get; set; }
         
         [Range(1, 100)]
-        [DataType(DataType.Currency)]
-        [Column(TypeName = "decimal(18, 0)")]
-        public decimal Grams { get; set; }
+        [Column(TypeName = "int(18, 0)")]
+        public int Grams { get; set; }
         
         [Range(1, 100)]
         [DataType(DataType.Currency)]
