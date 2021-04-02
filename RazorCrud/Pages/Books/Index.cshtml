@@ -2,15 +2,26 @@
 @model RazorCrud.Pages.Books.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Book selection";
 }
-
-<h1>Index</h1>
+<style>
+ .bodyBook{
+   background-image: linear-gradient(rgba(154,153,153,0.8), rgba(255,255,255,0)), url("Img/greenBook.jpg");
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;   
+ }
+ .opDiv{
+    opacity: 0.9;
+    }
+ </style>
+<body class="bodyBook">
+<h1 class="text-light">Book selection</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create" class="text-light">Create New</a>
 </p>
-<table class="table">
+<table class="table table-hover table-dark opDiv">
     <thead>
         <tr>
             <th>
@@ -50,11 +61,12 @@
                 @Html.DisplayFor(modelItem => item.Rating)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.ID" class="text-light">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID" class="text-light">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID" class="text-danger">Delete</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+</body>

@@ -4,13 +4,24 @@
 @{
     ViewData["Title"] = "Details";
 }
-
-<h1>Details</h1>
+<style>
+ .bodyBook{
+   background-image: linear-gradient(rgba(154,153,153,0.8), rgba(255,255,255,0)), url("../Img/greenBook.jpg");
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;   
+ }
+  .opDiv{
+       background-color:rgba(38,38,38,0.6);
+      }
+ </style>
+<body class="bodyBook">
+<h1 class="text-light">Details</h1>
 
 <div>
-    <h4>Book</h4>
+    <h4 class="text-light">Book</h4>
     <hr />
-    <dl class="row">
+    <dl class="row text-light opDiv">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Book.Title)
         </dt>
@@ -44,6 +55,7 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Book.ID">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Edit" asp-route-id="@Model.Book.ID" class="text-light">Edit</a> |
+    <a asp-page="./Index" class="text-light">Back to List</a>
 </div>
+</body>

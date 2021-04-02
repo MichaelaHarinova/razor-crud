@@ -23,7 +23,7 @@ namespace RazorCrud.Models
                     new Book
                     {
                         Title = "R.U.R",
-                        ReleaseDate = DateTime.Parse("1920-25-01"),
+                        ReleaseDate = DateTime.Parse("1920-12-01"),
                         Genre = "Science fiction",
                         Price = 7.99M
                     },

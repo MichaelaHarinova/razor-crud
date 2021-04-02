@@ -4,12 +4,20 @@
 @{
     ViewData["Title"] = "Create";
 }
+<style>
+ .bodyMusic{
+   background-image: linear-gradient(rgba(154,153,153,0.3), rgba(255,255,255,0)), url("../Img/VituvianMusic.jpg");
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;   
+ }
+ </style>
+<body class="bodyMusic">
+<h1 class="text-light">Create</h1>
 
-<h1>Create</h1>
-
-<h4>Music</h4>
+<h4 class="text-light">Music</h4>
 <hr />
-<div class="row">
+<div class="row text-light">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -39,16 +47,16 @@
                 <span asp-validation-for="Music.Genre" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-secondary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="Index" class="text-light">Back to List</a>
 </div>
-
+</body>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
